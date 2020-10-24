@@ -10,6 +10,7 @@ public class IATorre : MonoBehaviour
     public LayerMask layers;
     public float Latencia;
     public float Daño;
+    public ParticleSystem Chispas;
     Collider[] cols;
     DateTime TiempoDelUltimoDisparo;
     AudioSource audio;
@@ -42,7 +43,7 @@ public class IATorre : MonoBehaviour
 
             if (Reloj.TotalSeconds > Latencia)
             {
-                print(hitInfo.collider.name);
+                Chispas.Play();
                 audio.Play();
                 vidaEnemiga = hitInfo.collider.GetComponent<Vida>();
                 vidaEnemiga.ProbocarDaño(Daño);

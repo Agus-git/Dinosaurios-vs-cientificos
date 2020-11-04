@@ -43,7 +43,7 @@ public class IATorre : MonoBehaviour
 
             if (Reloj.TotalSeconds > Latencia)
             {
-                Chispas.Play();
+                Chispas.Play(true);
                 audio.Play();
                 vidaEnemiga = hitInfo.collider.GetComponent<Vida>();
                 vidaEnemiga.ProbocarDaño(Daño);

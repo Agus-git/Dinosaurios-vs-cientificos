@@ -11,10 +11,14 @@ public class IAEnemy : MonoBehaviour
     bool Rompiendo = false;
     Animator anim;
     Resistencia UltimoObstaculo;
+    public AudioSource[] audios;
+    public AudioSource StepAudio;
+    System.Random ran;
     void Start()
     {
         IA = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
+        ran = new System.Random();
     }
 
     // Update is called once per frame
@@ -42,6 +46,7 @@ public class IAEnemy : MonoBehaviour
     }
     void HitEvent()
     {
+        audios[ran.Next(audios.Length)].Play();
         if (UltimoObstaculo.Romper(3))
         {
             print("Paso 3");
@@ -49,5 +54,9 @@ public class IAEnemy : MonoBehaviour
             IA.destination = objetivo.position;
             Rompiendo = false;
         }
+    }
+    void StepEvent()
+    {
+        StepAudio.Play();
     }
 }

@@ -19,13 +19,13 @@ public class IAEnemy : MonoBehaviour
         IA = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
         ran = new System.Random();
+        IA.destination = objetivo.position;
+        anim.SetBool("Rompiendo", Rompiendo);
     }
 
     // Update is called once per frame
     void Update()
     {
-        IA.destination = objetivo.position;
-        anim.SetBool("Rompiendo", Rompiendo);
     }
 
     void OnCollisionEnter(Collision collision)
@@ -35,13 +35,6 @@ public class IAEnemy : MonoBehaviour
             UltimoObstaculo = collision.gameObject.GetComponent<Resistencia>();
             IA.isStopped = true;
             Rompiendo = true;
-        }
-    }
-    void OnCollisionExit(Collision collisionInfo)
-    {
-        
-        if (collisionInfo.gameObject.tag == "Porton")
-        {
         }
     }
     void HitEvent()

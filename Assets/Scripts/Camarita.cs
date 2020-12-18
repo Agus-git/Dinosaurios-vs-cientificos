@@ -15,8 +15,8 @@ public class Camarita : MonoBehaviour
             RaycastHit InformacionDelRayo;
             if (Physics.Raycast(rayo, out InformacionDelRayo, 10000f, layer))
             {
-                print("Tocar");
                 Base = InformacionDelRayo.collider.GetComponent<Base>();
+                print(Base.gameObject.name);
                 Base.Crear();
             }
         }

@@ -1,17 +1,15 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class Base : MonoBehaviour
+﻿
+public class NuevaBase : Base
 {
-    public GameObject[] Hijos;
-    protected bool Activo = false;
-    protected BotonConstruir botonPadre;
-    protected int Eleccion;
-    public int precio;
-    
-    public virtual void Crear()
+    bool abrir = false;
+    void Update()
+    {
+        if(abrir)
+        {
+            this.transform.Rotate(0f,0f,0.1f);
+        }
+    }
+    public override void Crear()
     {
         if (Activo)
         {
@@ -22,6 +20,7 @@ public class Base : MonoBehaviour
                     if (i == Eleccion)
                     {
                         Hijos[i].SetActive(true);
+                        abrir = true;
                         botonPadre.Prepararse();
                         //print($"Mostrate {Hijos[i].name}");
                     }
@@ -35,7 +34,7 @@ public class Base : MonoBehaviour
         }
     }
     
-    public virtual void activar(int v, BotonConstruir botonConstruir, int dinero)
+    public override void activar(int v, BotonConstruir botonConstruir, int dinero)
     {
         if (!Hijos[v].activeSelf)
         {
@@ -46,10 +45,8 @@ public class Base : MonoBehaviour
         }
     }
 
-    public virtual void activar()
+    public override void activar()
     {
         Activo = false;
     }
-
-
 }

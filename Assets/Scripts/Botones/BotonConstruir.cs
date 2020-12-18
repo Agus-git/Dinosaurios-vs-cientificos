@@ -12,6 +12,7 @@ public class BotonConstruir : MonoBehaviour
     public int Eleccion;
     Image image;
     Base Chijo;
+    NuevaBase Chijo2;
     public bool preparado;
 
     public void Start()
@@ -39,6 +40,7 @@ public class BotonConstruir : MonoBehaviour
             foreach (var item in Objetivos)
             {
                 Chijo = item.GetComponent<Base>();
+                print(Chijo.gameObject.name);
                 Chijo.activar(Eleccion, this, Precio);
             }
         }
@@ -50,6 +52,40 @@ public class BotonConstruir : MonoBehaviour
             {
                 Chijo = item.GetComponent<Base>();
                 Chijo.activar();
+            }
+        }
+
+    }
+    public void Prepararse2()
+    {
+        BotonConstruir BC;
+        preparado = !preparado;
+        if (preparado)
+        {
+            colorHijos.color = Color.green;
+            image.color = Color.green;
+            foreach (var item in botones)
+            {
+                BC = item.GetComponent<BotonConstruir>();
+                if (BC.preparado)
+                {
+                    BC.Prepararse();
+                }
+            }
+            foreach (var item in Objetivos)
+            {
+                Chijo2 = item.GetComponent<NuevaBase>();
+                Chijo2.activar(Eleccion, this, Precio);
+            }
+        }
+        else
+        {
+            colorHijos.color = Color.white;
+            image.color = Color.white;
+            foreach (var item in Objetivos)
+            {
+                Chijo2 = item.GetComponent<NuevaBase>();
+                Chijo2.activar();
             }
         }
 

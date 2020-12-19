@@ -1,12 +1,17 @@
 ﻿
 public class NuevaBase : Base
 {
-    bool abrir = false;
+    public bool abrir = false;
     void Update()
     {
         if(abrir)
         {
-            this.transform.Rotate(0f,0f,0.1f);
+            this.transform.Rotate(0f,0f,1f);
+            if (gameObject.transform.rotation.eulerAngles.z > 270)    
+            {
+                abrir = false;
+                Hijos[0].GetComponent<IATorre>().enabled = true;
+            }
         }
     }
     public override void Crear()

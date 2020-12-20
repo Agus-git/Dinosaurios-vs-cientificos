@@ -16,7 +16,7 @@ public class NuevaBase : Base
             {
                 abrir = false;
                 Hijos[0].GetComponent<IATorre>().enabled = true;
-                        this.GetComponent<AudioSource>().Stop();
+                    this.GetComponent<AudioSource>().Stop();
             }
         }
     }

@@ -40,7 +40,6 @@ public class BotonConstruir : MonoBehaviour
             foreach (var item in Objetivos)
             {
                 Chijo = item.GetComponent<Base>();
-                print(Chijo.gameObject.name);
                 Chijo.activar(Eleccion, this, Precio);
             }
         }

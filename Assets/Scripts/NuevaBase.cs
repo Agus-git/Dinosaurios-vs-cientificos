@@ -1,4 +1,9 @@
-﻿
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.AI;
+
 public class NuevaBase : Base
 {
     public bool abrir = false;
@@ -11,6 +16,7 @@ public class NuevaBase : Base
             {
                 abrir = false;
                 Hijos[0].GetComponent<IATorre>().enabled = true;
+                        this.GetComponent<AudioSource>().Stop();
             }
         }
     }
@@ -27,6 +33,7 @@ public class NuevaBase : Base
                         Hijos[i].SetActive(true);
                         abrir = true;
                         botonPadre.Prepararse();
+                        this.GetComponent<AudioSource>().Play();
                         //print($"Mostrate {Hijos[i].name}");
                     }
                     else

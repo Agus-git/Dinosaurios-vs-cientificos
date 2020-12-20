@@ -32,9 +32,10 @@ public class IAEnemy : MonoBehaviour
     {
         if (collision.gameObject.tag == "Porton")
         {
+            print($"Hola {collision.gameObject.name}");
             UltimoObstaculo = collision.gameObject.GetComponent<Resistencia>();
             IA.isStopped = true;
-            Rompiendo = true;
+            anim.SetBool("Rompiendo", true);
         }
     }
     void HitEvent()
@@ -45,7 +46,7 @@ public class IAEnemy : MonoBehaviour
             print("Paso 3");
             IA.isStopped = false;
             IA.destination = objetivo.position;
-            Rompiendo = false;
+            anim.SetBool("Rompiendo", false);
         }
     }
     void StepEvent()

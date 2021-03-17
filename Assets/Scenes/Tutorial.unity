@@ -43,7 +43,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 11
+  serializedVersion: 12
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -118,6 +118,8 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 615d69d6505d25840ac5732f81482058, type: 2}
@@ -257,11 +259,13 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.6745283, g: 1, b: 0.6794739, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9023b66c7d88545479f3cbc5be590a3d, type: 3}
+    m_Font: {fileID: 12800000, guid: 7f1f9ca8276239649a53d63feb1373f0, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -334,11 +338,13 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9023b66c7d88545479f3cbc5be590a3d, type: 3}
+    m_Font: {fileID: 12800000, guid: 7f1f9ca8276239649a53d63feb1373f0, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -413,11 +419,13 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9023b66c7d88545479f3cbc5be590a3d, type: 3}
+    m_Font: {fileID: 12800000, guid: 7f1f9ca8276239649a53d63feb1373f0, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -585,7 +593,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4549d5cdc6be9d84a9594dd76e9e56ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Controlador: {fileID: 1537384937}
 --- !u!1001 &721170149
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1013,11 +1020,13 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.2919456, g: 0.8207547, b: 0.2748754, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9023b66c7d88545479f3cbc5be590a3d, type: 3}
+    m_Font: {fileID: 12800000, guid: 7f1f9ca8276239649a53d63feb1373f0, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -1156,11 +1165,13 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9023b66c7d88545479f3cbc5be590a3d, type: 3}
+    m_Font: {fileID: 12800000, guid: 7f1f9ca8276239649a53d63feb1373f0, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -1233,11 +1244,13 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9023b66c7d88545479f3cbc5be590a3d, type: 3}
+    m_Font: {fileID: 12800000, guid: 7f1f9ca8276239649a53d63feb1373f0, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -1310,11 +1323,13 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9023b66c7d88545479f3cbc5be590a3d, type: 3}
+    m_Font: {fileID: 12800000, guid: 7f1f9ca8276239649a53d63feb1373f0, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -1461,11 +1476,13 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9023b66c7d88545479f3cbc5be590a3d, type: 3}
+    m_Font: {fileID: 12800000, guid: 7f1f9ca8276239649a53d63feb1373f0, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -1540,11 +1557,13 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9023b66c7d88545479f3cbc5be590a3d, type: 3}
+    m_Font: {fileID: 12800000, guid: 7f1f9ca8276239649a53d63feb1373f0, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -1846,11 +1865,13 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.9433962, g: 0.27144888, b: 0.27144888, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9023b66c7d88545479f3cbc5be590a3d, type: 3}
+    m_Font: {fileID: 12800000, guid: 7f1f9ca8276239649a53d63feb1373f0, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -1919,6 +1940,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1943,6 +1965,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1645649146
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2273,7 +2296,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4549d5cdc6be9d84a9594dd76e9e56ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Controlador: {fileID: 1537384937}
 --- !u!1001 &2085352247
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2395,11 +2417,13 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9023b66c7d88545479f3cbc5be590a3d, type: 3}
+    m_Font: {fileID: 12800000, guid: 7f1f9ca8276239649a53d63feb1373f0, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1

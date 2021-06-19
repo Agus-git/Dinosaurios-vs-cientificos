@@ -833,7 +833,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objetivo: {fileID: 1303778152}
   rango: 20
-  CantidadMaxima: 15
+  CantidadMaxima: 18
   test: 
   EnemigosPrimeros:
   - {fileID: 531866435455492854, guid: 30630858b4bac2f4dad2bef8edd6bc56, type: 3}
@@ -3241,6 +3241,10 @@ PrefabInstance:
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: 11f85ec71026d064aaadaa3e211be2b0, type: 3}
+    - target: {fileID: 2433794170929791134, guid: c650435a471d07544b824ff507fb5405, type: 3}
+      propertyPath: Escena
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2433794170929791135, guid: c650435a471d07544b824ff507fb5405, type: 3}
       propertyPath: m_FontData.m_Font
       value: 

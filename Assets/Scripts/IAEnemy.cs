@@ -8,16 +8,22 @@ public class IAEnemy : MonoBehaviour
 {
     NavMeshAgent IA;
     public Transform objetivo;
+    private Vida vida;
     bool Rompiendo = false;
     Animator anim;
     Resistencia UltimoObstaculo;
     public AudioSource[] audios;
     public AudioSource StepAudio;
     System.Random ran;
+    BoxCollider box;
+
     void Start()
     {
+        box = GetComponent<BoxCollider>();
         IA = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
+        vida = GetComponent<Vida>();
+
         ran = new System.Random();
         IA.destination = objetivo.position;
         anim.SetBool("Rompiendo", Rompiendo);
@@ -32,10 +38,15 @@ public class IAEnemy : MonoBehaviour
     {
         if (collision.gameObject.tag == "Porton")
         {
-            print($"Hola {collision.gameObject.name}");
+            print($"Hola, soy {this.gameObject.name} y tengo {vida.Salud}");
             UltimoObstaculo = collision.gameObject.GetComponent<Resistencia>();
             IA.isStopped = true;
             anim.SetBool("Rompiendo", true);
+        }
+        if (collision.gameObject.tag == "Enemigo" && vida.Salud == 0)
+        {
+            box.size -= new Vector3(0.1F, 0.1F, 0.1F);
+            //transform.localScale -= new Vector3(0.1F, 0.1F, 0.1F); hacer chiquito
         }
     }
     void HitEvent()

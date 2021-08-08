@@ -307,7 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdd4ac2ce35de794fafaf5c1ebc01857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radio: 8.2
+  radio: 8
   layers:
     serializedVersion: 2
     m_Bits: 256
@@ -5768,7 +5768,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 851569014}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 7.44, y: 3.41, z: 2.26}
+  m_LocalPosition: {x: 8.01, y: 3.41, z: 2.26}
   m_LocalScale: {x: 0.65, y: 0.65, z: 0.65}
   m_Children: []
   m_Father: {fileID: 0}
@@ -12564,7 +12564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdd4ac2ce35de794fafaf5c1ebc01857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radio: 8.2
+  radio: 8
   layers:
     serializedVersion: 2
     m_Bits: 256
@@ -17755,6 +17755,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2433794169805787051, guid: c650435a471d07544b824ff507fb5405, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.050048828
+      objectReference: {fileID: 0}
     - target: {fileID: 2433794169998625996, guid: c650435a471d07544b824ff507fb5405, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -17781,7 +17785,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2433794170293384453, guid: c650435a471d07544b824ff507fb5405, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1.2999992
+      value: 1.300003
       objectReference: {fileID: 0}
     - target: {fileID: 2433794170293384453, guid: c650435a471d07544b824ff507fb5405, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -18521,6 +18525,10 @@ PrefabInstance:
     - target: {fileID: 1092576749647064310, guid: 8a38953729ecbc94b896069d9f2f67e3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2019344943211262321, guid: 8a38953729ecbc94b896069d9f2f67e3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.14
       objectReference: {fileID: 0}
     - target: {fileID: 2894462881985091340, guid: 8a38953729ecbc94b896069d9f2f67e3, type: 3}
       propertyPath: m_StaticEditorFlags

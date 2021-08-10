@@ -4,6 +4,7 @@ using System.Diagnostics;
 using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Text;
 using System;
 
 public class Reloj : MonoBehaviour
@@ -25,6 +26,9 @@ public class Reloj : MonoBehaviour
         text.text = $"{a.Substring(0,4)}  -  {tiempo}";
         if (sw.Elapsed.TotalMinutes > tiempo)
         {
+            List<int> NotasDeMemoria = Memoria.Notas();
+            NotasDeMemoria.Add(ManagerBanco.Puntuacion.plata);
+            Memoria.Cambiador(NotasDeMemoria);
             SceneManager.LoadScene(Escena);
             Scene actual = SceneManager.GetActiveScene();
             SceneManager.UnloadSceneAsync(actual);

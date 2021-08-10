@@ -11,6 +11,9 @@ public class EscenaDeLaLuz : MonoBehaviour
     float velocity = 1;
     void Start()
     {
+        List<int> NotasDeMemoria = Memoria.Notas();
+        print(NotasDeMemoria[0]);
+
         audio = GetComponent<AudioSource>();
         luz = GetComponent<Light>();
         audio.Play();

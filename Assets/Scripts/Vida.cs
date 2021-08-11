@@ -10,12 +10,14 @@ public class Vida : MonoBehaviour
     Animator anim;
     NavMeshAgent IA;
     Rigidbody rig;
+    NavMeshObstacle obstacle;
 
     void Start()
     {
         anim = GetComponent<Animator>();
         IA = GetComponent<NavMeshAgent>();
         rig = GetComponent<Rigidbody>();
+        obstacle = GetComponent<NavMeshObstacle>();
     }
 
     public void ProbocarDaño(float Potencia)
@@ -24,7 +26,6 @@ public class Vida : MonoBehaviour
         if (Salud <= 0)
         {
             Morir(anim == null);
-            IA.isStopped = true;
         }
     }
 
@@ -36,6 +37,8 @@ public class Vida : MonoBehaviour
         }
         else
         {
+            obstacle.enabled = true;
+            IA.enabled = false;
             anim.SetBool("Muerto",true);
             this.gameObject.layer = 0;
             Destroy(this.gameObject, 15);

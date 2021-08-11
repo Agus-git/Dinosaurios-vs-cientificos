@@ -18579,6 +18579,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 2433794170929791134, guid: c650435a471d07544b824ff507fb5405, type: 3}
+      propertyPath: Escena
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2433794170929791135, guid: c650435a471d07544b824ff507fb5405, type: 3}
       propertyPath: m_FontData.m_Font
       value: 

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using System.Text;
 
 public class Vida : MonoBehaviour
 {
@@ -37,6 +38,9 @@ public class Vida : MonoBehaviour
         }
         else
         {
+            List<int> NotasDeMemoria = Memoria.Notas();
+            NotasDeMemoria.Add(10);
+            Memoria.Cambiador(NotasDeMemoria);
             obstacle.enabled = true;
             IA.enabled = false;
             anim.SetBool("Muerto",true);
